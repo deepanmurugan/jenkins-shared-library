@@ -1,4 +1,4 @@
-def build(String dockerRegistry) {
+def call(String dockerRegistry) {
   script {
     docker.build "${dockerRegistry}"
   }
