@@ -1,5 +1,5 @@
-def build(String dockerRegistry) {
+def build(String dockerRegistry, string buildNo) {
   script {
-    return docker.build "${dockerRegistry}" + ":$BUILD_NUMBER"
+    return docker.build "${dockerRegistry}" + "${buildNo}"
   }
 }
