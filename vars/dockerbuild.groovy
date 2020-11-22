@@ -1,5 +1,5 @@
 def build(String dockerRegistry) {
   script {
-    return docker.build ${dockerRegistry}
+    docker.build "${dockerRegistry}"
   }
 }
