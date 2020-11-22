@@ -1,5 +1,6 @@
-def call(String dockerRegistry) {
+def call(String dockerRegistry, String buildNo) {
   script {
-    docker.build "${dockerRegistry}"
+    def dockerimagetag = "${dockerRegistry}" + "${buildNo}"
+    docker.build "${dockerimagetag}"
   }
 }
